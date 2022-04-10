@@ -1,1 +1,3 @@
-<p>quotes works!</p>
+<ul *ngFor="let quote of quotes">
+    <li> <h3>{{quote.author}}</h3><br> <p>{{quote.quote}}</p><br> <button>{{quote.upvote}}</button> <button>{{quote.downvote}}</button> </li>
+</ul>
