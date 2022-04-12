@@ -3,23 +3,31 @@
 
 <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 
-<ul *ngFor="let quote of quotes">
+<ul *ngFor="let quote of quotes, let i = index">
 
     <div *ngIf="quote.upvote==highest && quote.upvote>0; then highlight else empty">
         
     </div>
     <ng-template #highlight>
-        <li appHighlight> <h3>{{quote.author}}</h3> <button><i class="fa-solid fa-down-from-dotted-line"></i></button><br>
-             <p>{{quote.quote}}</p><br>
-             <p>Submitted by: {{ quote.submittedby}}  </p>
-              <p> {{quote.submitdate|timing}} yrs ago </p>
+        <li appHighlight> <h3>{{quote.author}}</h3> 
+            <p>{{quote.quote}}</p><br>
+            <button (click)=showDetails(i)><i class="fa-solid fa-down-from-dotted-line"></i>details</button><br>
+             
+
+             <div *ngIf="quote.showDetails"><app-quotedetails [quote]='quote' (notWanted)='deleteQuote($event,i)'></app-quotedetails></div>
+
                <button>{{quote.upvote}}</button> <button>{{quote.downvote}}</button> </li>
     </ng-template>
     <ng-template #empty>
-        <li> <h3>{{quote.author}}</h3> <button><i class="fa-solid fa-down-from-dotted-line"></i></button><br>
-             <p>{{quote.quote}}</p><br>
-             <p>Submitted by: {{ quote.submittedby}}  </p>
-              <p> {{quote.submitdate|timing}} yrs ago </p>
+        <li> <h3>{{quote.author}}</h3>
+            <p>{{quote.quote}}</p><br> 
+            <button (click)=showDetails(i)><i class="fa-solid fa-down-from-dotted-line"></i>details</button><br>
+             
+
+            <div *ngIf="quote.showDetails">
+                <app-quotedetails [quote]='quote' (notWanted)='deleteQuote($event,i)'></app-quotedetails>
+            </div>
+             
               <button>{{quote.upvote}}</button> <button>{{quote.downvote}}</button> </li>
     </ng-template>
 

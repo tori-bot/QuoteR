@@ -16,7 +16,19 @@ export class QuotesComponent implements OnInit {
     
   ];
 
-  
+  showDetails(index:number){
+    this.quotes[index].showDetails = !this.quotes[index].showDetails;
+  }
+
+  deleteQuote(notWanted: any, index: number) {
+    if (notWanted) {
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].author}?`)
+
+      if (toDelete) {
+        this.quotes.splice(index, 1)
+      }
+    }
+  }
 
   array: number[] = this.quotes.map(quote => quote.upvote);
   highest = Math.max(...this.array);
