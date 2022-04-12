@@ -18,11 +18,12 @@ export class QuoteFormComponent implements OnInit {
   submittedby!: string;
   quote!: string;
   author!: string;
+  date!: Date;
   
   @Output() addQuote = new EventEmitter<Quote>();
 
   submitQuote() {
-    this.newQuote = new Quote(0, this.submittedby, this.quote, this.author, 0, 0);
+    this.newQuote = new Quote(0, this.author, this.quote,this.submittedby , new Date(), 0, 0);
     this.addQuote.emit(this.newQuote)
     console.log(this.newQuote)
   }

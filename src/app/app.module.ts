@@ -9,6 +9,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { QuotesComponent } from './components/quotes/quotes.component';
 import { QuoteFormComponent } from './components/quote-form/quote-form.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { TimingPipe } from './timing.pipe';
+import { QuotedetailsComponent } from './components/quotedetails/quotedetails.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { HighlightDirective } from './directives/highlight.directive';
     SidebarComponent,
     QuotesComponent,
     QuoteFormComponent,
-    HighlightDirective
+    HighlightDirective,
+    TimingPipe,
+    QuotedetailsComponent
   ],
   imports: [
     BrowserModule,
