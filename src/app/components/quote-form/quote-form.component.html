@@ -4,7 +4,7 @@
 <form #form='ngForm' *ngIf="showform" (ngSubmit)="submitQuote()">
     <div class="form-group">
       <label for="name">Your Name</label>
-      <input  type="text" class="form-control" id="name" name="name" value="" required #name='ngModel' [(ngModel)]="name" >
+      <input  type="text" class="form-control" id="submittedby" name="submittedby" value="" required #name='ngModel' [(ngModel)]="submittedby" >
     </div>
     <div class="form-group">
       <label for="quote">Quote</label>

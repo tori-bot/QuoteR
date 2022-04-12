@@ -15,14 +15,14 @@ export class QuoteFormComponent implements OnInit {
   }
 
   newQuote!: Quote;
-  name!: string;
+  submittedby!: string;
   quote!: string;
   author!: string;
   
   @Output() addQuote = new EventEmitter<Quote>();
 
   submitQuote() {
-    this.newQuote = new Quote(0, this.name, this.quote, this.author, 0, 0);
+    this.newQuote = new Quote(0, this.submittedby, this.quote, this.author, 0, 0);
     this.addQuote.emit(this.newQuote)
     console.log(this.newQuote)
   }
