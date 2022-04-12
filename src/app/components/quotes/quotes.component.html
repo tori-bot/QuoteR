@@ -9,10 +9,18 @@
         
     </div>
     <ng-template #highlight>
-        <li appHighlight> <h3>{{quote.author}}</h3><br> <p>{{quote.quote}}</p><br><p>Submitted by: {{ quote.submittedby}}  </p> <button>{{quote.upvote}}</button> <button>{{quote.downvote}}</button> </li>
+        <li appHighlight> <h3>{{quote.author}}</h3> <button><i class="fa-solid fa-down-from-dotted-line"></i></button><br>
+             <p>{{quote.quote}}</p><br>
+             <p>Submitted by: {{ quote.submittedby}}  </p>
+              <p> {{quote.submitdate|timing}} yrs ago </p>
+               <button>{{quote.upvote}}</button> <button>{{quote.downvote}}</button> </li>
     </ng-template>
     <ng-template #empty>
-        <li> <h3>{{quote.author}}</h3><br> <p>{{quote.quote}}</p><br><p>Submitted by: {{ quote.submittedby}}  </p> <button>{{quote.upvote}}</button> <button>{{quote.downvote}}</button> </li>
+        <li> <h3>{{quote.author}}</h3> <button><i class="fa-solid fa-down-from-dotted-line"></i></button><br>
+             <p>{{quote.quote}}</p><br>
+             <p>Submitted by: {{ quote.submittedby}}  </p>
+              <p> {{quote.submitdate|timing}} yrs ago </p>
+              <button>{{quote.upvote}}</button> <button>{{quote.downvote}}</button> </li>
     </ng-template>
 
     
