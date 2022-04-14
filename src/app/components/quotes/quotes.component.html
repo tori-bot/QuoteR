@@ -16,7 +16,7 @@
 
              <div *ngIf="quote.showDetails"><app-quotedetails [quote]='quote' (notWanted)='deleteQuote($event,i)'></app-quotedetails></div>
 
-               <button>{{quote.upvote}}</button> <button>{{quote.downvote}}</button> </li>
+               <button (click)="upvoteQuote(quote)"> {{quote.upvote}}</button> <button (click)="downvoteQuote(quote)" >{{quote.downvote}}</button> </li>
     </ng-template>
     <ng-template #empty>
         <li> <h3>{{quote.author}}</h3>
@@ -28,7 +28,7 @@
                 <app-quotedetails [quote]='quote' (notWanted)='deleteQuote($event,i)'></app-quotedetails>
             </div>
              
-              <button>{{quote.upvote}}</button> <button>{{quote.downvote}}</button> </li>
+              <button (click)="upvoteQuote(quote)" >{{quote.upvote}}</button> <button (click)="downvoteQuote(quote)" >{{quote.downvote}}</button> </li>
     </ng-template>
 
     

@@ -59,4 +59,22 @@ export class QuotesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  upvoteQuote(quote: Quote) {
+    quote.upvote += 1;
+
+    this.maxPerformanceIndex = Math.max(...this.quotes.map((quote) => quote.upvote - quote.downvote));
+    this.highest = Math.max(...this.quotes.map((quote) => quote.upvote));
+  }
+
+  downvoteQuote(quote: Quote) {
+    quote.upvote += 1;
+
+    this.maxPerformanceIndex = Math.max(...this.quotes.map((quote) => quote.upvote - quote.downvote));
+    this.highest = Math.max(...this.quotes.map((quote) => quote.upvote));
+  }
+
+
+
+
+
 }
