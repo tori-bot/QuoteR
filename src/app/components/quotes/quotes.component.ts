@@ -16,6 +16,10 @@ export class QuotesComponent implements OnInit {
     
   ];
 
+  maxPerformanceIndex = Math.max(...this.quotes.map((quote) => quote.upvote - quote.downvote));
+
+  
+
   showDetails(index:number){
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
@@ -36,11 +40,16 @@ export class QuotesComponent implements OnInit {
   addNewQuote(quote:any) {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;
+    quote.upvote = 0;
+    quote.downvote = 0;
     quote.submitdate=new Date(quote.submitdate)
     this.quotes.push(quote)
 
+    //reverse the array
     this.quotes.reverse();
   }
+
+
 
  
 
