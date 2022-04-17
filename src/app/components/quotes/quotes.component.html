@@ -3,13 +3,16 @@
 
 <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 
+<p id="intro"> Here is my quote repository for your entertainment.</p>
+<hr>
+
 <ul *ngFor="let quote of quotes, let i = index">
 
     
     <div class="card" *ngIf="quote.upvote==highest && quote.upvote>0; then highlight else empty">
         
     </div>
-    <ng-template #highlight>
+    <ng-template #highlight class="card-body">
         <li appHighlight> <h3>{{quote.author}}</h3> 
             <p>{{quote.quote}}</p><br>
             <button id="details" (click)=showDetails(i)>Details</button><br>
@@ -17,10 +20,10 @@
 
              <div *ngIf="quote.showDetails"><app-quotedetails [quote]='quote' (notWanted)='deleteQuote($event,i)'></app-quotedetails></div>
 
-               <button id="up" (click)="upvoteQuote(quote)"> {{quote.upvote}}</button>
-                <button id="down" (click)="downvoteQuote(quote)" >{{quote.downvote}}</button> </li>
+               <button id="up" (click)="upvoteQuote(quote)">  {{quote.upvote}} upvotes</button>
+                <button id="down" (click)="downvoteQuote(quote)" >{{quote.downvote}} downvotes</button> </li>
     </ng-template>
-    <ng-template #empty>
+    <ng-template #empty class="card-body">
         <li> <h3>{{quote.author}}</h3>
             <p>{{quote.quote}}</p><br> 
             <button id="details" (click)=showDetails(i)>Details</button><br>
@@ -30,8 +33,8 @@
                 <app-quotedetails [quote]='quote' (notWanted)='deleteQuote($event,i)'></app-quotedetails>
             </div>
              
-              <button id="up" (click)="upvoteQuote(quote)" >{{quote.upvote}}</button> 
-              <button id="down" (click)="downvoteQuote(quote)" >{{quote.downvote}}</button> </li>
+              <button id="up" (click)="upvoteQuote(quote)" >{{quote.upvote}} upvotes</button> 
+              <button id="down" (click)="downvoteQuote(quote)" >{{quote.downvote}} downvotes</button> </li>
     </ng-template>
 
     

@@ -1,3 +1,10 @@
+ul{
+    list-style: none;
+}
+#intro{
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+}
 button{
     color: white;
     background-color: green;
@@ -10,5 +17,11 @@ button{
 }
 
 #details{
-    background-color: aqua;
+    background-color:transparent;
+    margin-top: -3vh;
+    
+}
+hr{
+    border: solid;
+    color: white;
 }
