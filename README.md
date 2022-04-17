@@ -5,6 +5,16 @@
 # Description
 This is an application that showcases famous quotes from all over the world. A user can also curate their own quotes and add them to the repository.
 
+##Technologies used
+HTML/CSS
+Typescript
+Javascript
+
+## How to set up
+* clone this repository
+* add it to your local machine using git clone <repo address>
+* install angular cli, node and other listed dependencies.
+* customize app as you wish
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
 
@@ -30,7 +40,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Further help
 For more information on how to run this application check out https://angular.io/docs
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## license information
+this project is protected under the [MIT license](license)
 
 ## Contact author
 Contact via email: [makenavictoria1@gmail.com]
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
