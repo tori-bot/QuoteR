@@ -1,15 +1,28 @@
 .sidebar{
-    padding:0vh 1vw;
-    background-color: aqua;
+    padding-left: 2vw;
+    padding-right: 1vw;
+    background-color:#5cb85c;
 
+}
+p{
+    color: white;
+    margin-bottom: 6vh;
+}
+h1{
+    color: white;
+    padding: 10vh 2vw;
+}
+.content{
+    
+    z-index: 2;
+    padding: 10vh 2vw;
+    color: white;
+    
+    
 }
 
 .quotes{
-    
-    background-image: url(https://images.unsplash.com/photo-1567219934540-9f75f7b87552?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cXVvdGVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
-    background-size: cover;
-    background-position: center;
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
+    background-color: black;
     box-sizing: border-box;
+    z-index: 0;
 }
