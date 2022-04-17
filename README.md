@@ -5,7 +5,7 @@
 # Description
 This is an application that showcases famous quotes from all over the world. A user can also curate their own quotes and add them to the repository.
 
-##Technologies used
+## Technologies used
 HTML/CSS
 Typescript
 Javascript
