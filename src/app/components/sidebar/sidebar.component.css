@@ -1,3 +1,10 @@
+#title{
+    font-weight: 800;
+    font-family: monospace;
+    color: white;
+    text-align: center;
+    padding-top: 3vh;
+}
 img{
     height: 100%;
     width: 100%;
