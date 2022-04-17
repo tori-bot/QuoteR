@@ -5,30 +5,33 @@
 
 <ul *ngFor="let quote of quotes, let i = index">
 
-    <div *ngIf="quote.upvote==highest && quote.upvote>0; then highlight else empty">
+    
+    <div class="card" *ngIf="quote.upvote==highest && quote.upvote>0; then highlight else empty">
         
     </div>
     <ng-template #highlight>
         <li appHighlight> <h3>{{quote.author}}</h3> 
             <p>{{quote.quote}}</p><br>
-            <button (click)=showDetails(i)><i class="fa-solid fa-down-from-dotted-line"></i>details</button><br>
+            <button id="details" (click)=showDetails(i)>Details</button><br>
              
 
              <div *ngIf="quote.showDetails"><app-quotedetails [quote]='quote' (notWanted)='deleteQuote($event,i)'></app-quotedetails></div>
 
-               <button (click)="upvoteQuote(quote)"> {{quote.upvote}}</button> <button (click)="downvoteQuote(quote)" >{{quote.downvote}}</button> </li>
+               <button id="up" (click)="upvoteQuote(quote)"> {{quote.upvote}}</button>
+                <button id="down" (click)="downvoteQuote(quote)" >{{quote.downvote}}</button> </li>
     </ng-template>
     <ng-template #empty>
         <li> <h3>{{quote.author}}</h3>
             <p>{{quote.quote}}</p><br> 
-            <button (click)=showDetails(i)><i class="fa-solid fa-down-from-dotted-line"></i>details</button><br>
+            <button id="details" (click)=showDetails(i)>Details</button><br>
              
 
             <div *ngIf="quote.showDetails">
                 <app-quotedetails [quote]='quote' (notWanted)='deleteQuote($event,i)'></app-quotedetails>
             </div>
              
-              <button (click)="upvoteQuote(quote)" >{{quote.upvote}}</button> <button (click)="downvoteQuote(quote)" >{{quote.downvote}}</button> </li>
+              <button id="up" (click)="upvoteQuote(quote)" >{{quote.upvote}}</button> 
+              <button id="down" (click)="downvoteQuote(quote)" >{{quote.downvote}}</button> </li>
     </ng-template>
 
     

@@ -1,0 +1,14 @@
+button{
+    color: white;
+    background-color: green;
+    padding: 10px 20px;
+    margin: 3vh 1vw ;
+    border-radius: 7px;
+}
+#down{
+    background-color:maroon ;
+}
+
+#details{
+    background-color: aqua;
+}
