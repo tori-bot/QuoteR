@@ -46,7 +46,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 this project is protected under the [MIT license](license)
 
 ## Contact author
-Contact via email: [makenavictoria1@gmail.com]
+Contact via email: makenavictoria1@gmail.com
 
 
 
