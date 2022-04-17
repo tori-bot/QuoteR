@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuotesComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote(1, 'Nathan John', 'You live to die, but it is what you die for that is worth living.','Nathan John',new Date(2019,3,15), 3, 0),
-    new Quote(2, 'Bruce Lee', 'Be like water, my friend.','Mr Net', new Date(2016,5,27), 2, 0),
+    new Quote(1, 'Nathan John', 'You live to die, but it is what you die for that is worth living.','Nathan John',new Date(2019,3,15), 0, 0),
+    new Quote(2, 'Bruce Lee', 'Be like water, my friend.','Mr Net', new Date(2016,5,27), 0, 0),
     new Quote(3, 'Maya Angelou', 'I am a Woman Phenomenally.Phenomenal Woman,that is me.','Tori', new Date(2000,3,12), 0, 0),
     new Quote(4, 'Gandhi', 'You must be the change you wish to see in the world.','Mr Net', new Date(2007,12,5), 0, 0),
     new Quote(5, 'Joshua J. Marine', 'Challenges are what make life interesting and overcoming them is what makes life meaningful.','Mr Net', new Date(1996,6,17), 0, 0),
@@ -36,6 +36,8 @@ export class QuotesComponent implements OnInit {
 
   array: number[] = this.quotes.map(quote => quote.upvote);
   highest = Math.max(...this.array);
+  
+  
 
   addNewQuote(quote:any) {
     let quoteLength = this.quotes.length;
@@ -67,12 +69,11 @@ export class QuotesComponent implements OnInit {
   }
 
   downvoteQuote(quote: Quote) {
-    quote.upvote += 1;
+    quote.downvote += 1;
 
     this.maxPerformanceIndex = Math.max(...this.quotes.map((quote) => quote.upvote - quote.downvote));
     this.highest = Math.max(...this.quotes.map((quote) => quote.upvote));
   }
-
 
 
 
