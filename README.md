@@ -1,5 +1,11 @@
 # Quoter
 
+# Author- Victoria Makena
+
+# Description
+This is an application that showcases famous quotes from all over the world. A user can also curate their own quotes and add them to the repository.
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
 
 ## Development server
@@ -23,5 +29,8 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Further help
+For more information on how to run this application check out https://angular.io/docs
 
+## Contact author
+Contact via email: [makenavictoria1@gmail.com]
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
