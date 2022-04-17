@@ -5,6 +5,9 @@
 # Description
 This is an application that showcases famous quotes from all over the world. A user can also curate their own quotes and add them to the repository.
 
+## Live link
+https://tori-bot.github.io/QuoteR/
+
 ## Technologies used
 HTML/CSS
 Typescript
@@ -42,7 +45,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 For more information on how to run this application check out https://angular.io/docs
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## license information
+## License information
 this project is protected under the [MIT license](license)
 
 ## Contact author
