@@ -2,3 +2,23 @@ img{
     height: 24vh;
     width: 15vw;
 }
+
+ul{
+    list-style: none;
+}
+
+.nav-item{
+    padding-left: 7vw;
+    padding-top: 5vh;
+    color: white; 
+}
+
+.nav-link{
+    color: white;
+    font-size: larger;
+}
+hr{
+    color: white;
+    border: solid 1px;
+    width: 100%;
+}
